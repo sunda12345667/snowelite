@@ -13,11 +13,21 @@ const stats = [
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#0A1F44]">
-      {/* Background effects */}
+      {/* Video background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[200px]" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent/3 rounded-full blur-[150px]" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(77,168,218,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(77,168,218,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+          src="https://media.base44.com/videos/public/6a09ab2c572dc6b9e5ba9daf/159586943_generated_video.mp4"
+        />
+        {/* Dark overlay layers */}
+        <div className="absolute inset-0 bg-[#0A1F44]/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A1F44]/40 via-transparent to-[#0A1F44]/80" />
+        {/* Grid overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(77,168,218,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(77,168,218,0.04)_1px,transparent_1px)] bg-[size:60px_60px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20">
