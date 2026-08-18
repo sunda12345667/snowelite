@@ -23,7 +23,7 @@ const services = [
 export default function ServicesSection() {
   return (
     <section id="services" className="py-24 md:py-40 px-6 bg-[#0A1F44] relative overflow-hidden">
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(77,168,218,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(77,168,218,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(212,175,55,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(212,175,55,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <SectionHeader

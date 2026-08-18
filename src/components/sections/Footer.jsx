@@ -29,7 +29,7 @@ export default function Footer() {
               placeholder="email@company.com"
               className="bg-white/5 border-white/10 text-white placeholder:text-white/20 w-full md:w-72"
             />
-            <Button className="bg-accent hover:bg-accent/90 text-white px-6 whitespace-nowrap">
+            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 whitespace-nowrap">
               Subscribe
             </Button>
           </div>
@@ -60,11 +60,11 @@ export default function Footer() {
               <Snowflake className="w-3 h-3 text-accent" />
             </div>
             <span className="font-heading font-bold text-sm text-white/60">
-              Snow<span className="text-accent/60">Elite</span>
+              VELVET <span className="text-accent/60">CLEANING HIUB LIMITED</span>
             </span>
           </div>
           <p className="text-xs text-white/20 text-center">
-            © {new Date().getFullYear()} SnowElite Facility Management. All rights reserved.
+            © {new Date().getFullYear()} VELVET CLEANING HIUB LIMITED. All rights reserved.
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

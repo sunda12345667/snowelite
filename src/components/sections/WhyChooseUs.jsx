@@ -16,13 +16,13 @@ const comparisons = [
 export default function WhyChooseUs() {
   return (
     <section className="py-24 md:py-40 px-6 bg-[#0A1F44] relative overflow-hidden">
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(77,168,218,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(77,168,218,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(212,175,55,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(212,175,55,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto">
         <SectionHeader
           light
           label="Comparison"
-          title="Why SnowElite Stands Apart"
+          title="Why VELVET CLEANING HIUB LIMITED Stands Apart"
           description="The difference between ordinary cleaning services and an elite facility management corporation."
         />
 
@@ -38,7 +38,7 @@ export default function WhyChooseUs() {
               <span className="font-mono text-[11px] tracking-[0.2em] text-white/30 uppercase">Feature</span>
             </div>
             <div className="p-4 md:p-6 text-center border-x border-white/5">
-              <span className="font-heading font-bold text-accent text-sm">SnowElite</span>
+              <span className="font-heading font-bold text-accent text-sm">VELVET CLEANING HIUB LIMITED</span>
             </div>
             <div className="p-4 md:p-6 text-center">
               <span className="font-heading font-bold text-white/30 text-sm">Others</span>

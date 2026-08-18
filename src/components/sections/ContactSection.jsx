@@ -5,7 +5,7 @@ import SectionHeader from "@/components/shared/SectionHeader";
 const contacts = [
   { icon: Phone, label: "Main Line", value: "+27 11 000 0000" },
   { icon: AlertCircle, label: "Emergency Hotline", value: "+27 11 000 0001" },
-  { icon: Mail, label: "Email", value: "info@snowelite.co.za" },
+  { icon: Mail, label: "Email", value: "info@velvetcleaninghiub.com" },
   { icon: Clock, label: "Office Hours", value: "Mon–Fri: 07:00–18:00" },
   { icon: MapPin, label: "Head Office", value: "Johannesburg, South Africa" },
   { icon: MessageSquare, label: "WhatsApp", value: "+27 60 000 0000" },

@@ -15,19 +15,20 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#0A1F44]">
       {/* Video background */}
       <div className="absolute inset-0">
-        <video
+        {/* Removed external video - use local or placeholder */}
+        {/* <video
           autoPlay
           loop
           muted
           playsInline
           className="w-full h-full object-cover"
           src="https://media.base44.com/videos/public/6a09ab2c572dc6b9e5ba9daf/159586943_generated_video.mp4"
-        />
+        /> */}
         {/* Dark overlay layers */}
         <div className="absolute inset-0 bg-[#0A1F44]/70" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A1F44]/40 via-transparent to-[#0A1F44]/80" />
         {/* Grid overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(77,168,218,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(77,168,218,0.04)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(212,175,55,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(212,175,55,0.04)_1px,transparent_1px)] bg-[size:60px_60px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20">
@@ -77,7 +78,7 @@ export default function HeroSection() {
           >
             <Button
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-white h-14 px-8 text-base group"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground h-14 px-8 text-base group"
               onClick={() => document.getElementById("quote")?.scrollIntoView({ behavior: "smooth" })}
             >
               Request a Quote

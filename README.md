@@ -1,39 +1,54 @@
-**Welcome to your Base44 project** 
+**Welcome to VELVET CLEANING HIUB LIMITED** 
 
 **About**
 
-View and Edit  your app on [Base44.com](http://Base44.com) 
+VELVET CLEANING HIUB LIMITED is a modern, full-featured facility management application built with React, Vite, and Tailwind CSS.
 
-This project contains everything you need to run your app locally.
+**Getting Started**
 
-**Edit the code in your local development environment**
-
-Any change pushed to the repo will also be reflected in the Base44 Builder.
-
-**Prerequisites:** 
-
-1. Clone the repository using the project's Git URL 
+1. Clone the repository
 2. Navigate to the project directory
 3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
-
-```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
-
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.base44.app
-```
+4. Create an `.env.local` file with your configuration (if needed)
 
 Run the app: `npm run dev`
 
-**Publish your changes**
+**Build for Production**
 
-Open [Base44.com](http://Base44.com) and click on Publish.
+```bash
+npm run build
+```
 
-**Docs & Support**
+**Project Structure**
 
-Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
+- `src/` - React source code
+- `src/pages/` - Page components
+- `src/components/` - Reusable UI components
+- `src/lib/` - Utility functions and contexts
+- `src/api/` - API integration
 
-Support: [https://app.base44.com/support](https://app.base44.com/support)
+**Tech Stack**
+
+- React 18
+- Vite
+- Tailwind CSS
+- React Router
+- React Query
+- Radix UI Components
+
+**Available Scripts**
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint issues
+- `npm run typecheck` - Check TypeScript types
+- `npm run preview` - Preview production build
+
+**Support & Documentation**
+
+For more information, check the source code and component documentation.
+
+**License**
+
+MIT

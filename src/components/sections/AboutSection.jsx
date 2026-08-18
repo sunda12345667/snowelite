@@ -6,12 +6,12 @@ const pillars = [
   {
     icon: Target,
     title: "Our Mission",
-    text: "To redefine facility management across Africa through technology-driven operations, unwavering quality standards, and a commitment to creating pristine, high-performance environments for every client.",
+    text: "To deliver world-class cleaning solutions that exceed customer expectations through professionalism, innovation, reliability, and integrity.",
   },
   {
     icon: Eye,
     title: "Our Vision",
-    text: "To become Africa's most trusted and innovative facility management corporation — setting the global benchmark for operational excellence, sustainability, and elite service delivery.",
+    text: "To become the most trusted and preferred cleaning service provider in Nigeria and Africa.",
   },
   {
     icon: Gem,
@@ -34,7 +34,7 @@ export default function AboutSection() {
     <section id="about" className="py-24 md:py-40 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
-          label="About SnowElite"
+          label="About VELVET CLEANING HIUB LIMITED"
           title="The Architecture of Excellence"
           description="A next-generation integrated facility management company, focused on innovation, operational efficiency, and premium service delivery across Africa's most demanding environments."
         />

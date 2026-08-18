@@ -65,7 +65,7 @@ export default function BeforeAfter() {
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           label="Transformation"
-          title="The SnowElite Difference"
+          title="The VELVET CLEANING HIUB LIMITED Difference"
           description="Witness the measurable impact of our precision cleaning and facility management protocols."
         />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

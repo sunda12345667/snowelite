@@ -6,22 +6,22 @@ const testimonials = [
   {
     name: "Adebayo Okonkwo",
     role: "CEO, Meridian Properties",
-    text: "SnowElite transformed our approach to facility management. Their technology-driven operations and attention to detail are unmatched in the African market.",
+    text: "VELVET CLEANING HIUB LIMITED transformed our approach to facility management. Their technology-driven operations and attention to detail are unmatched in the African market.",
   },
   {
     name: "Sarah Ndikumana",
     role: "Property Manager, Crown Estates",
-    text: "We manage 45 luxury residences and SnowElite handles every one flawlessly. Their professionalism and response times set the standard for the industry.",
+    text: "We manage 45 luxury residences and VELVET CLEANING HIUB LIMITED handles every one flawlessly. Their professionalism and response times set the standard for the industry.",
   },
   {
     name: "Dr. Kwame Asante",
     role: "Director, Accra General Hospital",
-    text: "In healthcare, hygiene isn't optional — it's critical. SnowElite's medical-grade protocols and quality assurance give us absolute confidence.",
+    text: "In healthcare, hygiene isn't optional — it's critical. VELVET CLEANING HIUB LIMITED's medical-grade protocols and quality assurance give us absolute confidence.",
   },
   {
     name: "Fatima Al-Hassan",
     role: "GM, The Palms Hotel",
-    text: "Our guests expect five-star standards. SnowElite delivers consistently, and their real-time reporting gives us complete visibility into operations.",
+    text: "Our guests expect five-star standards. VELVET CLEANING HIUB LIMITED delivers consistently, and their real-time reporting gives us complete visibility into operations.",
   },
 ];
 
@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
         <SectionHeader
           label="Client Voices"
           title="Trusted by Industry Leaders"
-          description="What Africa's most discerning organizations say about the SnowElite standard of service."
+          description="What Africa's most discerning organizations say about the VELVET CLEANING HIUB LIMITED standard of service."
         />
 
         <div className="grid md:grid-cols-2 gap-6">

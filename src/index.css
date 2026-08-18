@@ -11,33 +11,33 @@
     --font-mono: 'JetBrains Mono', monospace;
 
     --background: 0 0% 100%;
-    --foreground: 216 72% 15%;
+    --foreground: 218 60% 14%;
     --card: 0 0% 100%;
-    --card-foreground: 216 72% 15%;
+    --card-foreground: 218 60% 14%;
     --popover: 0 0% 100%;
-    --popover-foreground: 216 72% 15%;
-    --primary: 216 72% 15%;
+    --popover-foreground: 218 60% 14%;
+    --primary: 218 60% 14%;
     --primary-foreground: 0 0% 100%;
     --secondary: 210 20% 96%;
-    --secondary-foreground: 216 72% 15%;
+    --secondary-foreground: 218 60% 14%;
     --muted: 210 20% 96%;
     --muted-foreground: 0 0% 45%;
-    --accent: 200 65% 57%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 43 74% 49%;
+    --accent-foreground: 218 60% 14%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 200 65% 57%;
-    --chart-1: 200 65% 57%;
-    --chart-2: 216 72% 15%;
+    --ring: 43 74% 49%;
+    --chart-1: 43 74% 49%;
+    --chart-2: 218 60% 14%;
     --chart-3: 0 0% 75%;
-    --chart-4: 200 65% 70%;
-    --chart-5: 216 72% 25%;
+    --chart-4: 43 74% 65%;
+    --chart-5: 218 60% 25%;
     --radius: 0rem;
 
-    --navy: 216 72% 15%;
-    --frost: 200 65% 57%;
+    --navy: 218 60% 14%;
+    --frost: 43 74% 49%;
     --silver: 0 0% 75%;
     --ice: 0 0% 100%;
   }
@@ -49,27 +49,27 @@
     --card-foreground: 0 0% 95%;
     --popover: 220 25% 10%;
     --popover-foreground: 0 0% 95%;
-    --primary: 200 65% 57%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 43 74% 49%;
+    --primary-foreground: 218 60% 14%;
     --secondary: 220 20% 14%;
     --secondary-foreground: 0 0% 95%;
     --muted: 220 20% 14%;
     --muted-foreground: 0 0% 60%;
-    --accent: 200 65% 57%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 43 74% 49%;
+    --accent-foreground: 218 60% 14%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 98%;
     --border: 220 15% 18%;
     --input: 220 15% 18%;
-    --ring: 200 65% 57%;
-    --chart-1: 200 65% 57%;
+    --ring: 43 74% 49%;
+    --chart-1: 43 74% 49%;
     --chart-2: 220 30% 30%;
     --chart-3: 0 0% 50%;
-    --chart-4: 200 65% 70%;
+    --chart-4: 43 74% 65%;
     --chart-5: 220 50% 40%;
 
     --navy: 220 30% 8%;
-    --frost: 200 65% 57%;
+    --frost: 43 74% 49%;
     --silver: 0 0% 50%;
     --ice: 0 0% 95%;
   }
@@ -104,7 +104,7 @@
     @apply backdrop-blur-2xl bg-black/20 border border-white/10;
   }
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-blue-300;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-amber-200;
   }
 }
 

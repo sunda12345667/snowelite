@@ -39,7 +39,7 @@ export default function QuoteSection() {
           {steps.map((s, i) => (
             <div key={s} className="flex items-center gap-2">
               <div className={`w-8 h-8 flex items-center justify-center text-xs font-mono border transition-colors ${
-                i <= step ? "bg-accent text-white border-accent" : "bg-card text-muted-foreground border-border"
+                i <= step ? "bg-accent text-accent-foreground border-accent" : "bg-card text-muted-foreground border-border"
               }`}>
                 {i + 1}
               </div>
@@ -154,11 +154,11 @@ export default function QuoteSection() {
               <ArrowLeft className="w-4 h-4 mr-2" /> Back
             </Button>
             {step < 2 ? (
-              <Button onClick={() => setStep(step + 1)} className="bg-accent hover:bg-accent/90 text-white">
+              <Button onClick={() => setStep(step + 1)} className="bg-accent hover:bg-accent/90 text-accent-foreground">
                 Continue <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             ) : (
-              <Button className="bg-accent hover:bg-accent/90 text-white">
+              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
                 Submit Request <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             )}

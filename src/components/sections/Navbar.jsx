@@ -40,7 +40,7 @@ export default function Navbar() {
               <Snowflake className="w-4 h-4 text-accent" />
             </div>
             <span className="font-heading font-bold text-lg text-white tracking-tight">
-              Snow<span className="text-accent">Elite</span>
+              VELVET <span className="text-accent">CLEANING HIUB LIMITED</span>
             </span>
           </a>
 
@@ -65,7 +65,7 @@ export default function Navbar() {
               Contact
             </Button>
             <Button
-              className="bg-accent hover:bg-accent/90 text-white text-sm px-6 h-10"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground text-sm px-6 h-10"
               onClick={() => document.getElementById("quote")?.scrollIntoView({ behavior: "smooth" })}
             >
               Request a Quote
@@ -101,7 +101,7 @@ export default function Navbar() {
                 </a>
               ))}
               <Button
-                className="bg-accent hover:bg-accent/90 text-white mt-4 h-14 text-lg"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground mt-4 h-14 text-lg"
                 onClick={() => {
                   setMobileOpen(false);
                   document.getElementById("quote")?.scrollIntoView({ behavior: "smooth" });
