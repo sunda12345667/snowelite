@@ -13,6 +13,7 @@ import TeamSection from "@/components/sections/TeamSection";
 import QuoteSection from "@/components/sections/QuoteSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/sections/Footer";
+import WhatsAppFloatingButton from "@/components/shared/WhatsAppFloatingButton";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       <QuoteSection />
       <ContactSection />
       <Footer />
+      <WhatsAppFloatingButton />
     </div>
   );
 }
