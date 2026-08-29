@@ -1,45 +1,84 @@
 import { motion } from "framer-motion";
-import { Linkedin } from "lucide-react";
+import { Compass, Cog, ShieldCheck, Lightbulb, Users, Handshake } from "lucide-react";
 import SectionHeader from "@/components/shared/SectionHeader";
 
-const team = [
-  { name: "James Mthembu", role: "Chief Executive Officer", initials: "JM" },
-  { name: "Amara Diallo", role: "Chief Operations Officer", initials: "AD" },
-  { name: "David Osei", role: "VP, Technology & Innovation", initials: "DO" },
-  { name: "Zinhle Nkosi", role: "Director, Quality Assurance", initials: "ZN" },
-  { name: "Ibrahim Yusuf", role: "Head of Client Relations", initials: "IY" },
-  { name: "Grace Kimani", role: "Regional Director, East Africa", initials: "GK" },
+const capabilities = [
+  {
+    icon: Compass,
+    title: "Executive Leadership",
+    desc: "Strategic direction and long-term corporate growth.",
+    image: "https://images.unsplash.com/photo-1759310610480-48649b55fbdf?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    icon: Cog,
+    title: "Operations Excellence",
+    desc: "Delivering efficient processes and reliable service execution.",
+    image: "https://images.unsplash.com/photo-1787672357491-d43acdf974cb?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Quality Assurance",
+    desc: "Maintaining high standards, safety, compliance, and continuous improvement.",
+    image: "https://images.unsplash.com/photo-1770822662831-c361f15790ea?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    icon: Lightbulb,
+    title: "Technology & Innovation",
+    desc: "Using smart solutions to improve efficiency and customer experience.",
+    image: "https://images.unsplash.com/photo-1604933762021-54a5858c9832?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    icon: Users,
+    title: "People & Culture",
+    desc: "Building a skilled, motivated, and high-performing workforce.",
+    image: "https://images.unsplash.com/photo-1755705152670-0cfe7829fd0e?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    icon: Handshake,
+    title: "Business Development",
+    desc: "Creating partnerships and opportunities that drive sustainable growth.",
+    image: "https://images.unsplash.com/photo-1784202464389-de4ce60886df?auto=format&fit=crop&w=800&q=80",
+  },
 ];
 
 export default function TeamSection() {
   return (
     <section className="py-24 md:py-40 px-6 bg-[#0A1F44] relative overflow-hidden">
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(212,175,55,0.02)_1px,transparent_1px),linear_gradient(90deg,rgba(212,175,55,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(212,175,55,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(212,175,55,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <SectionHeader
           light
-          label="Leadership"
+          label="Our People. Our Strength."
           title="Our Management Team"
-          description="Experienced professionals driving operational excellence across the African continent."
+          description="A dedicated team of professionals driving operational excellence, innovation, and sustainable growth across Africa."
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {team.map((member, i) => (
+          {capabilities.map((cap, i) => (
             <motion.div
-              key={member.name}
+              key={cap.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
-              className="group p-6 border border-white/5 bg-white/[0.02] hover:border-accent/20 transition-all duration-500"
+              whileHover={{ y: -4 }}
+              className="group border border-white/5 bg-white/[0.02] hover:border-accent/20 hover:bg-white/[0.04] transition-all duration-500 overflow-hidden"
             >
-              <div className="w-16 h-16 bg-accent/10 border border-accent/20 flex items-center justify-center font-heading font-bold text-accent text-xl mb-5">
-                {member.initials}
+              <div className="aspect-video w-full overflow-hidden">
+                <img
+                  src={cap.image}
+                  alt={cap.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <h3 className="font-heading font-semibold text-white text-lg">{member.name}</h3>
-              <p className="text-white/40 text-sm mt-1 mb-4">{member.role}</p>
-              <Linkedin className="w-4 h-4 text-white/20 group-hover:text-accent transition-colors cursor-pointer" />
+              <div className="p-6">
+                <div className="w-10 h-10 border border-white/10 flex items-center justify-center mb-5 group-hover:border-accent/30 transition-colors">
+                  <cap.icon className="w-4 h-4 text-white/40 group-hover:text-accent transition-colors" />
+                </div>
+                <h3 className="font-heading font-semibold text-white text-lg mb-2">{cap.title}</h3>
+                <p className="text-white/40 text-sm leading-relaxed">{cap.desc}</p>
+              </div>
             </motion.div>
           ))}
         </div>

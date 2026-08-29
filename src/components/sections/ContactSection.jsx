@@ -3,12 +3,12 @@ import { Phone, Mail, Clock, MapPin, MessageSquare, AlertCircle } from "lucide-r
 import SectionHeader from "@/components/shared/SectionHeader";
 
 const contacts = [
-  { icon: Phone, label: "Main Line", value: "+27 11 000 0000" },
-  { icon: AlertCircle, label: "Emergency Hotline", value: "+27 11 000 0001" },
+  { icon: Phone, label: "Main Line", value: "+234 814 320 3600" },
+  { icon: AlertCircle, label: "Emergency Hotline", value: "+234 814 320 3600" },
   { icon: Mail, label: "Email", value: "info@velvetcleaninghiub.com" },
   { icon: Clock, label: "Office Hours", value: "Mon–Fri: 07:00–18:00" },
-  { icon: MapPin, label: "Head Office", value: "Johannesburg, South Africa" },
-  { icon: MessageSquare, label: "WhatsApp", value: "+27 60 000 0000" },
+  { icon: MapPin, label: "Head Office", value: "Close D, LSDPC Complex, Ogudu GRA, Lagos" },
+  { icon: MessageSquare, label: "WhatsApp", value: "+234 814 320 3600" },
 ];
 
 export default function ContactSection() {
@@ -49,8 +49,8 @@ export default function ContactSection() {
           >
             <div className="text-center">
               <MapPin className="w-8 h-8 text-accent/40 mx-auto mb-3" />
-              <p className="text-sm text-muted-foreground">Sandton City, Johannesburg</p>
-              <p className="text-xs text-muted-foreground/60 mt-1">South Africa</p>
+              <p className="text-sm text-muted-foreground">Close D, LSDPC Complex, Ogudu GRA</p>
+              <p className="text-xs text-muted-foreground/60 mt-1">Lagos, Nigeria</p>
             </div>
           </motion.div>
         </div>

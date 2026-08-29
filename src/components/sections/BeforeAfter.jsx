@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import SectionHeader from "@/components/shared/SectionHeader";
 
 const showcases = [
-  { label: "Corporate Office", before: "Before: Outdated, poorly maintained workspace", after: "After: Pristine, modern, professional environment" },
-  { label: "Industrial Facility", before: "Before: Accumulated grime and safety hazards", after: "After: Spotless, compliant, and inspection-ready" },
-  { label: "Post-Construction", before: "Before: Construction debris and dust throughout", after: "After: Move-in ready with showroom finish" },
-  { label: "Luxury Residence", before: "Before: Neglected surfaces and dull finishes", after: "After: Restored brilliance with premium detailing" },
+  { label: "Corporate Office", before: "Before: Outdated, poorly maintained workspace", after: "After: Pristine, modern, professional environment", image: "https://images.unsplash.com/photo-1627905646269-7f034dcc5738?auto=format&fit=crop&w=800&q=80" },
+  { label: "Industrial Facility", before: "Before: Accumulated grime and safety hazards", after: "After: Spotless, compliant, and inspection-ready", image: "https://images.unsplash.com/photo-1669101602124-f5b78895d91c?auto=format&fit=crop&w=800&q=80" },
+  { label: "Post-Construction", before: "Before: Construction debris and dust throughout", after: "After: Move-in ready with showroom finish", image: "https://images.unsplash.com/photo-1742483359033-13315b247c74?auto=format&fit=crop&w=800&q=80" },
+  { label: "Luxury Residence", before: "Before: Neglected surfaces and dull finishes", after: "After: Restored brilliance with premium detailing", image: "https://images.unsplash.com/photo-1698328722772-cbe7fb7c8d12?auto=format&fit=crop&w=800&q=80" },
 ];
 
 function SliderCard({ item, delay }) {
@@ -21,16 +21,22 @@ function SliderCard({ item, delay }) {
       className="group border border-border bg-card overflow-hidden"
     >
       <div className="relative h-56 bg-muted overflow-hidden">
-        {/* Before */}
-        <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 to-orange-900/10 flex items-center justify-center">
-          <span className="text-sm text-muted-foreground/60 px-4 text-center">{item.before}</span>
+        {/* Before (desaturated photo) */}
+        <div className="absolute inset-0">
+          <img src={item.image} alt={item.before} className="w-full h-full object-cover grayscale brightness-[.65]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-red-900/30 to-orange-900/20 flex items-center justify-center">
+            <span className="text-sm text-white px-4 text-center drop-shadow-md">{item.before}</span>
+          </div>
         </div>
-        {/* After (overlay based on slider) */}
+        {/* After (full-color photo, revealed by slider) */}
         <div
-          className="absolute inset-0 bg-gradient-to-br from-accent/10 to-blue-900/10 flex items-center justify-center"
+          className="absolute inset-0"
           style={{ clipPath: `inset(0 ${100 - value}% 0 0)` }}
         >
-          <span className="text-sm text-accent/80 px-4 text-center">{item.after}</span>
+          <img src={item.image} alt={item.after} className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-blue-900/10 flex items-center justify-center">
+            <span className="text-sm text-white px-4 text-center drop-shadow-md">{item.after}</span>
+          </div>
         </div>
         {/* Slider line */}
         <div
@@ -65,7 +71,7 @@ export default function BeforeAfter() {
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           label="Transformation"
-          title="The VELVET CLEANING HIUB LIMITED Difference"
+          title="The VELVET CLEANING HIUB Difference"
           description="Witness the measurable impact of our precision cleaning and facility management protocols."
         />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

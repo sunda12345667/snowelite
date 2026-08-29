@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SectionHeader from "@/components/shared/SectionHeader";
+import { toast } from "@/components/ui/use-toast";
 
 const services = [
   "Commercial Cleaning", "Residential Cleaning", "Industrial Cleaning",
@@ -16,6 +17,63 @@ const services = [
 
 const steps = ["Service", "Details", "Contact"];
 
+const propertySizeLabels = {
+  small: "Under 500 sqm",
+  medium: "500 - 2,000 sqm",
+  large: "2,000 - 10,000 sqm",
+  enterprise: "10,000+ sqm",
+};
+
+const scheduleLabels = {
+  daily: "Daily",
+  weekly: "Weekly",
+  biweekly: "Bi-Weekly",
+  monthly: "Monthly",
+  "one-time": "One-Time",
+};
+
+const budgetLabels = {
+  standard: "Standard",
+  premium: "Premium",
+  enterprise: "Enterprise",
+  custom: "Custom / Negotiate",
+};
+
+// Business WhatsApp line for incoming service requests.
+const WHATSAPP_BUSINESS_NUMBER_LOCAL = "08143203600";
+
+// Nigerian local numbers (0XXXXXXXXXX) convert to WhatsApp/international
+// format by dropping the leading 0 and prefixing the 234 country code.
+const toWhatsAppInternational = (localNumber) => `234${localNumber.replace(/^0/, "")}`;
+
+function buildWhatsAppMessage(form) {
+  const lines = ["Hello, I would like to request a cleaning service.", ""];
+
+  const customerLines = [];
+  if (form.name) customerLines.push(`Name: ${form.name}`);
+  if (form.phone) customerLines.push(`Phone: ${form.phone}`);
+  if (form.email) customerLines.push(`Email: ${form.email}`);
+  if (customerLines.length) {
+    lines.push("Customer Details", ...customerLines, "");
+  }
+
+  const serviceLines = [];
+  if (form.service) serviceLines.push(`Service Required: ${form.service}`);
+  if (form.propertySize) serviceLines.push(`Property Size: ${propertySizeLabels[form.propertySize] || form.propertySize}`);
+  if (form.location) serviceLines.push(`Address: ${form.location}`);
+  if (form.schedule) serviceLines.push(`Preferred Schedule: ${scheduleLabels[form.schedule] || form.schedule}`);
+  if (form.budget) serviceLines.push(`Budget Range: ${budgetLabels[form.budget] || form.budget}`);
+  if (serviceLines.length) {
+    lines.push("Service Details", ...serviceLines, "");
+  }
+
+  if (form.message) {
+    lines.push("Additional Information:", form.message);
+  }
+
+  return lines.join("\n").trim();
+}
+
 export default function QuoteSection() {
   const [step, setStep] = useState(0);
   const [form, setForm] = useState({
@@ -24,6 +82,29 @@ export default function QuoteSection() {
   });
 
   const update = (key, value) => setForm({ ...form, [key]: value });
+
+  const handleSubmit = () => {
+    const requiredFields = [
+      { key: "service", label: "Service Required", step: 0 },
+      { key: "name", label: "Full Name", step: 2 },
+      { key: "phone", label: "Phone / WhatsApp", step: 2 },
+    ];
+
+    const missing = requiredFields.find((f) => !form[f.key]?.trim());
+    if (missing) {
+      setStep(missing.step);
+      toast({
+        title: "Missing required field",
+        description: `Please provide your ${missing.label} before submitting.`,
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const message = buildWhatsAppMessage(form);
+    const url = `https://wa.me/${toWhatsAppInternational(WHATSAPP_BUSINESS_NUMBER_LOCAL)}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <section id="quote" className="py-24 md:py-40 px-6 bg-secondary">
@@ -134,7 +215,7 @@ export default function QuoteSection() {
               </div>
               <div>
                 <label className="text-xs font-mono tracking-wider text-muted-foreground uppercase mb-2 block">Phone / WhatsApp</label>
-                <Input placeholder="+27 000 000 0000" value={form.phone} onChange={(e) => update("phone", e.target.value)} />
+                <Input placeholder="0814 320 3600" value={form.phone} onChange={(e) => update("phone", e.target.value)} />
               </div>
               <div>
                 <label className="text-xs font-mono tracking-wider text-muted-foreground uppercase mb-2 block">Additional Details</label>
@@ -158,7 +239,7 @@ export default function QuoteSection() {
                 Continue <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             ) : (
-              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button onClick={handleSubmit} className="bg-accent hover:bg-accent/90 text-accent-foreground">
                 Submit Request <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             )}
@@ -168,7 +249,7 @@ export default function QuoteSection() {
         {/* WhatsApp */}
         <div className="text-center mt-8">
           <a
-            href="https://wa.me/27000000000"
+            href={`https://wa.me/${toWhatsAppInternational(WHATSAPP_BUSINESS_NUMBER_LOCAL)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"

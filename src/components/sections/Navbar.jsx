@@ -40,7 +40,7 @@ export default function Navbar() {
               <Snowflake className="w-4 h-4 text-accent" />
             </div>
             <span className="font-heading font-bold text-lg text-white tracking-tight">
-              VELVET <span className="text-accent">CLEANING HIUB LIMITED</span>
+              VELVET <span className="text-accent">CLEANING HIUB</span>
             </span>
           </a>
 

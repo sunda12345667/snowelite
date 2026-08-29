@@ -22,7 +22,7 @@ export default function WhyChooseUs() {
         <SectionHeader
           light
           label="Comparison"
-          title="Why VELVET CLEANING HIUB LIMITED Stands Apart"
+          title="Why VELVET CLEANING HIUB Stands Apart"
           description="The difference between ordinary cleaning services and an elite facility management corporation."
         />
 
@@ -38,7 +38,7 @@ export default function WhyChooseUs() {
               <span className="font-mono text-[11px] tracking-[0.2em] text-white/30 uppercase">Feature</span>
             </div>
             <div className="p-4 md:p-6 text-center border-x border-white/5">
-              <span className="font-heading font-bold text-accent text-sm">VELVET CLEANING HIUB LIMITED</span>
+              <span className="font-heading font-bold text-accent text-sm">VELVET CLEANING HIUB</span>
             </div>
             <div className="p-4 md:p-6 text-center">
               <span className="font-heading font-bold text-white/30 text-sm">Others</span>

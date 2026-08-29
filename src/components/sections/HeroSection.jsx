@@ -13,17 +13,13 @@ const stats = [
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#0A1F44]">
-      {/* Video background */}
+      {/* Background image */}
       <div className="absolute inset-0">
-        {/* Removed external video - use local or placeholder */}
-        {/* <video
-          autoPlay
-          loop
-          muted
-          playsInline
+        <img
+          src="https://images.unsplash.com/photo-1787702320216-be3c4e9bdb73?auto=format&fit=crop&w=1920&q=80"
+          alt="Professional facility cleaning specialists at work on a modern high-rise building"
           className="w-full h-full object-cover"
-          src="https://media.base44.com/videos/public/6a09ab2c572dc6b9e5ba9daf/159586943_generated_video.mp4"
-        /> */}
+        />
         {/* Dark overlay layers */}
         <div className="absolute inset-0 bg-[#0A1F44]/70" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A1F44]/40 via-transparent to-[#0A1F44]/80" />

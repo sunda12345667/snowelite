@@ -60,11 +60,11 @@ export default function Footer() {
               <Snowflake className="w-3 h-3 text-accent" />
             </div>
             <span className="font-heading font-bold text-sm text-white/60">
-              VELVET <span className="text-accent/60">CLEANING HIUB LIMITED</span>
+              VELVET <span className="text-accent/60">CLEANING HIUB</span>
             </span>
           </div>
           <p className="text-xs text-white/20 text-center">
-            © {new Date().getFullYear()} VELVET CLEANING HIUB LIMITED. All rights reserved.
+            © {new Date().getFullYear()} VELVET CLEANING HIUB. All rights reserved.
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

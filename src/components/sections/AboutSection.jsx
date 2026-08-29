@@ -6,12 +6,12 @@ const pillars = [
   {
     icon: Target,
     title: "Our Mission",
-    text: "To deliver world-class cleaning solutions that exceed customer expectations through professionalism, innovation, reliability, and integrity.",
+    text: "We deliver spotless results, every time, through unmatched professionalism, relentless innovation, and uncompromising integrity — earning our clients' trust one clean space at a time.",
   },
   {
     icon: Eye,
     title: "Our Vision",
-    text: "To become the most trusted and preferred cleaning service provider in Nigeria and Africa.",
+    text: "To be Africa's most trusted name in clean — the standard every other cleaning service is measured against.",
   },
   {
     icon: Gem,
@@ -34,7 +34,7 @@ export default function AboutSection() {
     <section id="about" className="py-24 md:py-40 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
-          label="About VELVET CLEANING HIUB LIMITED"
+          label="About VELVET CLEANING HIUB"
           title="The Architecture of Excellence"
           description="A next-generation integrated facility management company, focused on innovation, operational efficiency, and premium service delivery across Africa's most demanding environments."
         />
